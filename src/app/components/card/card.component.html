@@ -1,0 +1,21 @@
+<!-- <div>
+    {{cardChild.title}}
+    {{cardChild.description}}
+   
+</div> -->
+
+
+<p-card header="{{cardChild.title}}" [style]="{width: '360px'}" styleClass="p-card-shadow">
+    <ng-template pTemplate="header">
+        <img alt="Card" src="assets/images/usercard.png">
+    </ng-template>
+    <p>
+        {{cardChild.description}}
+    </p>
+    <ng-template pTemplate="footer">
+        <app-card-btn
+            [cardChildBtnText]="cardChild.btnText"
+            [isDifferent]="cardChild.isBtnDifferent">
+       </app-card-btn>
+    </ng-template>
+</p-card>
